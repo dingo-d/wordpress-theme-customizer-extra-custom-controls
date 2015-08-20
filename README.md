@@ -8,3 +8,5 @@ I plan on putting some neat examples of custom controls for wordpress theme cust
 
 Added Checkbox Switch custom control
 - css taken from: https://proto.io/freebies/onoff/
+Added Custom Info control
+Added Custom Separator control
