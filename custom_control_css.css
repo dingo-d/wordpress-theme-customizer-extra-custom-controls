@@ -58,3 +58,50 @@
 .onoffswitch-checkbox:checked + .onoffswitch-label:before {
 	right: 0;
 }
+
+.customize-control-image .thumbnail{
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAGUlEQVQYV2M4gwH+YwCGIasIUwhT25BVBADtzYNYrHvv4gAAAABJRU5ErkJggg==);
+}
+
+.customize-control-image img{
+	width: auto;
+}
+
+.customize_multi_fields .set{
+	padding-right: 15px;
+	position: relative;
+	margin-bottom: 5px;
+}
+
+.customize_multi_remove_field{
+	position: absolute;
+	right: 0;
+	top: 5px;
+	color: red;
+}
+
+.customize_image_select label{
+	display: inline-block;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+.customize_image_select label:last-of-type{
+	margin-right: 0;
+}
+
+.customize_image_select label input{
+  display:none;
+}
+
+.customize_image_select label input + img{
+  	border-color: #d3dad7;
+  	border-width: 3px;
+  	border-style: solid;
+}
+
+.customize_image_select label input:checked + img{
+  	border-color: #0074a2;
+  	border-width: 3px;
+  	border-style: solid;
+}
