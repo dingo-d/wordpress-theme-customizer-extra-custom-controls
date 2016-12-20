@@ -4,7 +4,13 @@ Additional Wordpress Customizer controls
 
 I plan on putting some neat examples of custom controls for wordpress theme customizer, so feel free to use theme as you wish.
 
-## Ver 2.0
+## Ver 1.2.0
+
+Added Slider Custom control
+
+Fixed Code
+
+## Ver 1.0.1
 
 Added Multi Input Custom control
 
