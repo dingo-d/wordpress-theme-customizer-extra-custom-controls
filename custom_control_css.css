@@ -1,9 +1,28 @@
-/*Separator*/
+/*
+
+Custom controls css file
+
+[Table of Contents]
+
+1. Separator
+2. Description Popup
+3. Regular checkbox
+4. Image Control
+5. Toggle - On/Off switch button
+6. Alpha Color Picker
+7. Easy Google Fonts
+8. Slider
+9. Selection
+10. Multi fields
+
+*/
+
+/*************** 1. Separator ***************/
 .customize-control-separator{
 	display: block !important;
 }
 
-/*Description Popup*/
+/*************** 2. Description Popup ***************/
 .customize-control{
 	position: relative;
 }
@@ -30,11 +49,9 @@
 	top: 8px;
 }
 
-/*checkbox control*/
 #customize-controls .checkbox_switch .description{
 	width: 214px;
 }
-/*checkbox control*/
 
 #customize-controls .description a,
 #customize-controls .customize-info .customize-panel-description a{
@@ -92,7 +109,46 @@
 	display: none;
 }
 
-/*Image Control*/
+/*************** 3. Regular checkbox ***************/
+.customize-control-checkbox label{
+	margin-left: 0;
+	padding-left: 25px;
+}
+
+.customize-control-checkbox input[type="checkbox"]{
+	width: 23px;
+	height: 23px;
+	background: #fff;
+	box-shadow: 0 0 1px #bcbcbc inset;
+	border: 0;
+	position: relative;
+	-webkit-transition: all 150ms ease-in;
+	-moz-transition: all 150ms ease-in;
+	-ms-transition: all 150ms ease-in;
+	-o-transition: all 150ms ease-in;
+	transition: all 150ms ease-in;
+}
+
+.customize-control-checkbox input[type="checkbox"]:checked{
+	background: -webkit-linear-gradient(0deg, #0073aa 0%, #50a8b1 100%);
+	background: -moz-linear-gradient(0deg, #0073aa 0%, #50a8b1 100%);
+	background: -o-linear-gradient(0deg, #0073aa 0%, #50a8b1 100%);
+	background: -ms-linear-gradient(0deg, #0073aa 0%, #50a8b1 100%);
+	background: linear-gradient(90deg, #0073aa 0%, #50a8b1 100%);
+	box-shadow: 0 0 1px transparent inset;
+}
+
+.customize-control-checkbox input[type="checkbox"]:checked:before{
+	content: "✔";
+	color: #fff;
+	position: absolute;
+	top: 6px;
+	left: 9px;
+	font-size: 16px;
+	line-height: 0.8;
+}
+
+/*************** 4. Image Control ***************/
 .customize-control-image .thumbnail{
 	text-align: center;
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAGUlEQVQYV2M4gwH+YwCGIasIUwhT25BVBADtzYNYrHvv4gAAAABJRU5ErkJggg==);
@@ -102,61 +158,39 @@
 	width: auto;
 }
 
-.customize_multi_fields .set{
-	margin-bottom: 5px;
-	padding-right: 15px;
-	position: relative;
-}
-
-.customize_multi_remove_field{
-	color: red;
-	position: absolute;
-	right: -7px;
-	top: 5px;
-}
-
-.image_radio_buttons label,
-.customize_shop_layout_image_select label,
-.customize_single_product_layout_image_select label{
+.image_radio_buttons label{
 	display: inline-block;
 	margin-bottom: 5px;
 	margin-right: 3px;
 }
 
-.image_radio_buttons label:last-of-type,
-.customize_shop_layout_image_select label:last-of-type,
-.customize_single_product_layout_image_select label:last-of-type{
+.image_radio_buttons label:last-of-type{
 	margin-right: 0;
 }
 
-.image_radio_buttons label input,
-.customize_shop_layout_image_select label input,
-.customize_single_product_layout_image_select label input{
+.image_radio_buttons label input{
 	display:none;
 }
 
-.image_radio_buttons label input + img,
-.customize_shop_layout_image_select label input + img,
-.customize_single_product_layout_image_select label input + img{
+.image_radio_buttons label input + img{
 	border-color: #d3dad7;
 	border-style: solid;
 	border-width: 3px;
 }
 
-.image_radio_buttons label input:checked + img,
-.customize_shop_layout_image_select label input:checked + img,
-.customize_single_product_layout_image_select label input:checked + img{
+.image_radio_buttons label input:checked + img{
 	border-color: #0074a2;
 	border-style: solid;
 	border-width: 3px;
 }
 
-/*Checkbox - On/Off switch button*/
+/*************** 5. Toggle - On/Off switch button ***************/
 .customize-control-checkbox .onoffswitch-label{
 	line-height: 28px;
 	margin-left: 0;
 	padding-bottom: 0;
 	padding-top: 0;
+	margin-top: 6px;
 }
 
 .onoffswitch_label{
@@ -168,9 +202,10 @@
 }
 
 .onoffswitch {
+	-webkit-user-select:none;
 	-moz-user-select:none;
 	-ms-user-select: none;
-	-webkit-user-select:none;
+	user-select: none;
 	float: right;
 	position: relative;
 	width: 40px;
@@ -182,12 +217,11 @@
 }
 
 .onoffswitch-label {
-	background-color: #9E9E9E;
+	background-color: #bcbcbc;
 	border-radius: 18px;
-	border: 2px solid #9E9E9E;
 	cursor: pointer;
 	display: block;
-	height: 18px;
+	height: 12px;
 	line-height: 18px;
 	overflow: hidden;
 	padding: 0;
@@ -195,65 +229,34 @@
 }
 
 .onoffswitch-label:before {
-	background: #EBEBEB;
+	background: #efefef;
 	border-radius: 18px;
-	border: 2px solid #9E9E9E;
 	bottom: 0;
 	content: "";
 	display: block;
 	margin: 0;
+	width: 23px;
+	height: 23px;
 	position: absolute;
-	right: 20px;
+	right: 17px;
 	top: 0;
 	transition: all 0.2s ease-in 0s;
-	width: 18px;
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label {
-	background-color: #42A5F5;
+	background-color: #54a7af;
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label,
 .onoffswitch-checkbox:checked + .onoffswitch-label:before {
-	border-color: #42A5F5;
+	border-color: #54a7af;
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label:before {
 	right: 0;
 }
 
-.customize_header_image_select label,
-.customize_footer_image_select label{
-	display: inline-block;
-	margin-bottom: 5px;
-	margin-right: 3px;
-}
-
-.customize_header_image_select label:last-of-type,
-.customize_footer_image_select label:last-of-type{
-	margin-right: 0;
-}
-
-.customize_header_image_select label input,
-.customize_footer_image_select label input{
-	display:none;
-}
-
-.customize_header_image_select label input + img,
-.customize_footer_image_select label input + img{
-		border-color: #d3dad7;
-		border-style: solid;
-		border-width: 3px;
-}
-
-.customize_header_image_select label input:checked + img,
-.customize_footer_image_select label input:checked + img{
-		border-color: #0074a2;
-		border-style: solid;
-		border-width: 3px;
-}
-
-/*Alpha Color Picker*/
+/*************** 6. Alpha Color Picker ***************/
 .customize-alpha-container .transparency {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -309,7 +312,7 @@
 	border-bottom:none;
 }
 
-/* Easy Google Fonts */
+/*************** 7. Easy Google Fonts ***************/
 #accordion-panel-tt_font_typography_panel .description.customize-panel-description{
 	display: block;
 }
@@ -318,7 +321,7 @@
 	margin-bottom: 10px;
 }
 
-/* Slider */
+/*************** 8. Slider ***************/
 .slider_value{
 	margin-left: 20px;
 }
@@ -327,9 +330,10 @@
 	position: relative;
 	text-align: left;
 	margin-top: 20px;
-	background: #9E9E9E;
+	background: #bcbcbc;
 	border-radius: 2px;
 }
+
 .ui-slider .ui-slider-handle {
 	position: absolute;
 	z-index: 2;
@@ -343,6 +347,7 @@
 	touch-action: none;
 	cursor: pointer;
 }
+
 .ui-slider .ui-slider-range {
 	position: absolute;
 	z-index: 1;
@@ -352,7 +357,6 @@
 	background-position: 0 0;
 }
 
-/* support: IE8 - See #6727 */
 .ui-slider.ui-state-disabled .ui-slider-handle,
 .ui-slider.ui-state-disabled .ui-slider-range {
 	filter: inherit;
@@ -361,17 +365,21 @@
 .ui-slider-horizontal {
 	height: .8em;
 }
+
 .ui-slider-horizontal .ui-slider-handle {
 	top: -.3em;
 	margin-left: -.6em;
 }
+
 .ui-slider-horizontal .ui-slider-range {
 	top: 0;
 	height: 100%;
 }
+
 .ui-slider-horizontal .ui-slider-range-min {
 	left: 0;
 }
+
 .ui-slider-horizontal .ui-slider-range-max {
 	right: 0;
 }
@@ -380,18 +388,89 @@
 	width: .8em;
 	height: 100px;
 }
+
 .ui-slider-vertical .ui-slider-handle {
 	left: -.3em;
 	margin-left: 0;
 	margin-bottom: -.6em;
 }
+
 .ui-slider-vertical .ui-slider-range {
 	left: 0;
 	width: 100%;
 }
+
 .ui-slider-vertical .ui-slider-range-min {
 	bottom: 0;
 }
+
 .ui-slider-vertical .ui-slider-range-max {
 	top: 0;
+}
+
+/*************** 9. Selection ***************/
+
+.customize-control select{
+	border: 1px solid #f9f9fe;
+	background: #fff;
+	position: relative;
+	border-radius: 0;
+	height: 27px;
+	line-height: 27px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.customize-control select:active,
+.customize-control select:focus{
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+/*************** 10. Multi fields ***************/
+.customize_multi_fields .set{
+	margin-bottom: 5px;
+	padding-right: 15px;
+	position: relative;
+}
+
+.customize_multi_fields input{
+	margin-bottom: 5px!important;
+}
+
+.customize_multi_remove_field{
+	color: red;
+	position: absolute;
+	right: -7px;
+	top: 3px;
+}
+
+.customize_multi_remove_field:active,
+.customize_multi_remove_field:focus{
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+/*************** 11. Input ***************/
+
+input[type="text"]{
+	background: #f9f9fe;
+	position: relative;
+	border-radius: 0;
+	border: 0;
+	height: 24px;
+	line-height: 24px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus{
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
