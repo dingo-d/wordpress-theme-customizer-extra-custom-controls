@@ -275,7 +275,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 					?>
 					<label>
 						<input type="radio" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $choices_key ); ?>" <?php $this->link(); ?> <?php checked( esc_attr( $choices_key ), $this->value() ); ?>/>
-						<img src="<?php echo esc_attr( $choices_value['image'] ); ?>" alt="<?php esc_attr( $choices_value['name'] ); ?>" title="<?php esc_attr( $choices_value['name'] ); ?>" />
+						<img src="<?php echo esc_attr( $choices_value['image'] ); ?>" alt="<?php echo esc_attr( $choices_value['name'] ); ?>" title="<?php echo esc_attr( $choices_value['name'] ); ?>" />
 					</label>
 					<?php
 				}
