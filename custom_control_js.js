@@ -16,7 +16,7 @@ jQuery( document ).ready(function($) {
 			var multi_saved_values = multi_saved_value.split( "|" );
 			$this.find( '.customize_multi_fields' ).empty();
 			$.each(multi_saved_values, function( index, value ) {
-				$this.find( '.customize_multi_fields' ).append( '<div class="set"><input type="text" value="' + value + '" class="customize_multi_single_field" /><a href="#" class="customize_multi_remove_field">X</a></div>' );
+				$this.find( '.customize_multi_fields' ).append( '<div class="set"><input type="text" value="' + value + '" class="customize_multi_single_field" /><span class="customize_multi_remove_field"><span class="dashicons dashicons-no-alt"></span></span></div>' );
 			});
 		}
 	});
@@ -24,7 +24,7 @@ jQuery( document ).ready(function($) {
 	function utter_customize_multi_add_field(e) {
 		e.preventDefault();
 		var $control = $( this ).parents( '.customize_multi_input' );
-		$control.find( '.customize_multi_fields' ).append( '<div class="set"><input type="text" value="" class="customize_multi_single_field" /><a href="#" class="customize_multi_remove_field">X</a></div>' );
+		$control.find( '.customize_multi_fields' ).append( '<div class="set"><input type="text" value="" class="customize_multi_single_field" /><span class="customize_multi_remove_field"><span class="dashicons dashicons-no-alt"></span></span></div>' );
 	}
 
 	function utter_customize_multi_single_field() {
