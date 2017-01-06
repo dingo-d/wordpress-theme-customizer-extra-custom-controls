@@ -1,5 +1,6 @@
 === Wordpress Theme Customizer Extra Custom controls ===
-Contributors: dingo-d
+
+Contributors: Denis Žoljom (dingo-d)
 Requires at least: 3.9
 Tested up to: 4.7
 Stable tag: 1.3.0
