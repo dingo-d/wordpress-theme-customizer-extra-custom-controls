@@ -172,7 +172,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 						<a href="#" class="customize_multi_remove_field"><span class="dashicons dashicons-no-alt"></span></a>
 					</div>
 				</div>
-				<a href="#" class="button button-primary customize_multi_add_field"><?php esc_html_e( 'Add More', 'utter' ) ?></a>
+				<a href="#" class="button button-primary customize_multi_add_field"><?php esc_html_e( 'Add More', 'mytheme' ) ?></a>
 			</label>
 			<?php
 		}
@@ -326,6 +326,82 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 				<div class="slider-range"></div>
 			</div>
 		<?php
+		}
+	}
+
+	/**
+	 * Margin and padding box model custom control
+	 *
+	 * @package WordPress
+	 * @subpackage inc/customizer
+	 * @version 1.1.0
+	 * @author  Denis Žoljom <http://madebydenis.com/>
+	 * @license https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3
+	 * @link https://github.com/dingo-d/wordpress-theme-customizer-extra-custom-controls
+	 * @since  1.0.0
+	 */
+	class Box_Model extends WP_Customize_Control {
+		/**
+		 * Control type
+		 *
+		 * @var string
+		 */
+		public $type = 'box_model';
+		/**
+		 * Control scripts and styles enqueue
+		 *
+		 * @since 1.0.0
+		 */
+		public function enqueue() {
+			wp_enqueue_script( 'custom_controls', get_template_directory_uri() . '/inc/customizer/js/custom-controls.js', array( 'jquery' ), $theme_version, true );
+			wp_enqueue_style( 'custom_controls_css', get_template_directory_uri() . '/inc/customizer/css/custom-controls.css' );
+		}
+
+		/**
+		 * Control method
+		 *
+		 * @since 1.0.0
+		 */
+		public function render_content() {
+			if ( ! empty( $this->label ) ) : ?>
+			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+			<?php endif;
+			if ( ! empty( $this->description ) ) : ?>
+			<p class="description customize-control-description"><?php echo esc_html( $this->description ); ?></p>
+			<?php endif;
+			$saved_values = ( ! is_array( $this->value() ) && ! empty( $this->value() ) ) ? explode( ', ', $this->value() ) : explode( ', ', '\'\', \'\', \'\', \'\', \'\', \'\', \'\', \'\'' ); ?>
+			<div class="box-model-wrapper">
+			<?php
+			foreach ( $this->choices as $key => $value ) {
+				if ( 'margin' === $key ) { ?>
+				<div class="box-model-margin">
+					<span><?php esc_html_e( 'Margin', 'mytheme' ); ?></span>
+					<?php
+					$margin_count = 0;
+					foreach ( $value as $m_key => $m_value ) {
+						echo '<input type="number" placeholder="-" value="' . esc_attr( $saved_values[ $margin_count ] ) . '" class="box-model-field ' . esc_html( $m_key ) . '">';
+						$margin_count++;
+					} ?>
+				</div><?php
+				}
+				if ( 'padding' === $key ) { ?>
+				<div class="box-model-padding">
+					<span><?php esc_html_e( 'Padding', 'mytheme' ); ?></span>
+					<?php
+					$padding_count = 4; // margin takes array keys 0-3, padding 4-7.
+					foreach ( $value as $p_key => $p_value ) {
+						echo '<input type="number" placeholder="-" value="' . esc_attr( $saved_values[ $padding_count ] ) . '" class="box-model-field ' . esc_html( $p_key ) . '">';
+						$padding_count++;
+					} ?>
+				</div><?php
+				}
+			} ?>
+				<div class="box-model-content">
+					<span><?php esc_html_e( 'Content', 'mytheme' ); ?></span>
+				</div>
+				<input type="hidden" class="box-model-saved" <?php $this->link(); ?> value="<?php echo esc_attr( $saved_values ); ?>" />
+			</div>
+			<?php
 		}
 	}
 

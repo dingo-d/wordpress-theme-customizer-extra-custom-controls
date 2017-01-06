@@ -14,6 +14,8 @@ Custom controls css file
 8. Slider
 9. Selection
 10. Multi fields
+11. Input
+12. Box Model
 
 */
 
@@ -473,4 +475,170 @@ input[type="text"]:focus{
 	outline: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
+}
+
+/*************** 12. Box Model ***************/
+.customize-control .box-model-wrapper{
+	width: 100%;
+	position: relative;
+	height: 275px;
+	margin-top: 20px;
+}
+
+.customize-control .box-model-wrapper span{
+	margin: 3px;
+	line-height: 12px;
+	font-size: 12px;
+	font-weight: 700;
+	position: absolute;
+	bottom: 5px;
+	left: 4px;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.customize-control .box-model-wrapper .box-model-margin:hover{
+	background-color: #bfded2;
+}
+
+.customize-control .box-model-wrapper .box-model-padding:hover{
+	background-color: #76b99f;
+}
+
+.customize-control .box-model-wrapper .box-model-content:hover{
+	background-color: #5ead8f;
+}
+
+.customize-control .box-model-margin{
+	position: absolute;
+	height: 275px;
+	background-color: #a9bed7;
+	width: 100%;
+}
+
+.customize-control .box-model-padding{
+	background-color: #6995b9;
+	position: absolute;
+	height: 167px;
+	width: 167px;
+	left: 50%;
+	margin-left: -84px;
+	top: 50%;
+	margin-top: -84px;
+}
+
+.customize-control .box-model-content{
+	background-color: #5471af;
+	position: absolute;
+	height: 60px;
+	width: 80px;
+	left: 50%;
+	margin-left: -40px;
+	top: 50%;
+	margin-top: -30px;
+}
+
+.customize-control .box-model-content span{
+	top: 50%;
+	margin: 0;
+	bottom: auto;
+	margin-top: -6px;
+	left: 50%;
+	margin-left: -27px;
+}
+
+.customize-control input[type=number]::-webkit-inner-spin-button,
+.customize-control input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.customize-control input[type=number] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+	margin: 0;
+}
+
+.customize-control input.box-model-field{
+	position: absolute;
+	width: 26px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 16px;
+	border: none;
+	background-color: #597fd0;
+	box-shadow: none;
+	padding: 0;
+	color: #fff;
+}
+
+.customize-control input.box-model-field:focus{
+	background-color: #fff;
+	border: 0;
+	color: #212121;
+	outline: none;
+}
+
+.customize-control input.box-model-field::-webkit-input-placeholder{
+	color:    #fff;
+}
+
+.customize-control input.box-model-field:-moz-placeholder{
+	color:    #fff;
+}
+
+.customize-control input.box-model-field::-moz-placeholder{
+	color:    #fff;
+}
+
+.customize-control input.box-model-field:-ms-input-placeholder{
+	color:    #fff;
+}
+
+/*
+
+[Table of Contents]
+
+1. Separator
+2. Description Popup
+3. Regular checkbox
+4. Image Control
+5. Toggle - On/Off switch button
+6. Alpha Color Picker
+7. Easy Google Fonts
+8. Slider
+9. Selection
+10. Multi fields
+11. Input
+12. Box Model
+
+*/
+
+
+.customize-control input.box-model-field.margin-top,
+.customize-control input.box-model-field.padding-top{
+	left: 50%;
+	margin-left: -13px !important;
+	top: 13px;
+}
+
+.customize-control input.box-model-field.margin-left,
+.customize-control input.box-model-field.padding-left{
+	left: 9px;
+	top: 50%;
+	margin-top: -11px !important;
+}
+
+.customize-control input.box-model-field.margin-right,
+.customize-control input.box-model-field.padding-right{
+	right: 9px;
+	top: 50%;
+	margin-top: -11px !important;
+}
+
+.customize-control input.box-model-field.margin-bottom,
+.customize-control input.box-model-field.padding-bottom{
+	left: 50%;
+	margin-left: -13px !important;
+	bottom: 13px;
 }
