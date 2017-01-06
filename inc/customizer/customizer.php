@@ -127,7 +127,7 @@ function mytheme_customize_register( WP_Customize_Manager $wp_customize ) {
 		'transport'	        => 'postMessage',
 		'sanitize_callback' => 'mytheme_checkbox_sanitization',
 	) );
-	$wp_customize->add_control( new Toggle_Checkbox_Custom_Control( $wp_customize, 'boxed_body', array(
+	$wp_customize->add_control( new Checkbox_Custom_Control( $wp_customize, 'boxed_body', array(
 		'label'    	  => esc_html__( 'Boxed Body', 'mytheme' ),
 		'description' => esc_html__( 'Check this to enable boxed body layout', 'mytheme' ),
 		'type'        => 'checkbox',

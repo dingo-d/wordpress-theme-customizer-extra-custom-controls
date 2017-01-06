@@ -155,11 +155,16 @@ if ( ! function_exists( 'mytheme_sanitize_integer' ) ) {
 }
 ```
 
+![Box Model Custom Control](https://github.com/dingo-d/wordpress-theme-customizer-extra-custom-controls/blob/master/images/customizer-box.jpg)
+![Multi Input Custom Control](https://github.com/dingo-d/wordpress-theme-customizer-extra-custom-controls/blob/master/images/customizer-multi-input.jpg)
+![Checkbox and Slider Custom Control](https://github.com/dingo-d/wordpress-theme-customizer-extra-custom-controls/blob/master/images/customizer-check-slider.jpg)
+
+
 ## Changelog
 
 ### Ver 1.3.0
 
-Added
+Added Box Model Custom control
 
 ### Ver 1.2.0
 

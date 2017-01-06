@@ -449,6 +449,10 @@ Custom controls css file
 	top: 3px;
 }
 
+.customize_multi_remove_field span{
+	text-decoration: none;
+}
+
 .customize_multi_remove_field:active,
 .customize_multi_remove_field:focus{
 	outline: none;
