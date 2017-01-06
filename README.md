@@ -1,23 +1,32 @@
-=== Wordpress Theme Customizer Extra Custom controls ===
+# Wordpress Theme Customizer Extra Custom controls
 
 Contributors: Denis Žoljom (dingo-d)
+
 Requires at least: 3.9
+
 Tested up to: 4.7
+
 Stable tag: 1.3.0
+
 License: GPLv2 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+======
 
 Customizer usage example for WordPress with added custom controls.
 
 This is all GPL, so you're free to use it, but if you use it in your theme or plugin, don't forget to attribute where you've got this from :)
 
-== Description ==
+======
+
+## Description
 
 This is a working example of the customizer settings for WordPress theme. You can use it, test it, expand it etc. What ever works for you.
 
 This is a work in progress, so new stuff will be added as time goes on.
 
-== How to use ==
+## How to use
 
 You can download or clone this repo and then just paste the `\inc` folder inside your theme. Or the `\customizer` folder wherever you want in your theme.
 
@@ -146,18 +155,18 @@ if ( ! function_exists( 'mytheme_sanitize_integer' ) ) {
 }
 ```
 
-== Changelog ==
+## Changelog
 
-## Ver 1.3.0
+### Ver 1.3.0
 
 Added
 
-## Ver 1.2.0
+### Ver 1.2.0
 
 * Added Slider Custom control
 * Fixed Code
 
-## Ver 1.0.1
+### Ver 1.0.1
 
 * Added Multi Input Custom control
 * Added Sidebar Dropdown Custom control
@@ -165,7 +174,7 @@ Added
 * Sanitized few inputs
 * Added .js file for custom controls and updated .css file
 
-## Ver 1.0
+### Ver 1.0
 
 * Added Checkbox Switch custom control
 - css taken from: https://proto.io/freebies/onoff/
