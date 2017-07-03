@@ -2,8 +2,18 @@ jQuery( document ).ready(function($) {
 	"use strict";
 
 	mytheme_control_description();
+	
+	function mytheme_control_description() {
+		$( 'li.customize-control' ).each(function() {
+			var $this = $( this );
+			if ( $this.find( 'p' ).html() !== '' ) {
+				$this.find( 'p' ).replaceWith( '<span class="description customize-control-description">' + $this.find( 'p' ).text() + '</span>' );
+			}
+		});
+	}
 
 	$( document ).on( 'click', '.customize_multi_add_field', mytheme_customize_multi_add_field )
+	 	.on( 'change', '.customize_multi_single_field', mytheme_customize_multi_single_field )
 		.on( 'click', '.customize_multi_remove_field', mytheme_customize_multi_remove_field )
 		.on( 'keyup', '.box-model-field', mytheme_box_model_change )
 		.on( 'change keyup', '.slider_input', mytheme_slider_input_change );
@@ -22,9 +32,14 @@ jQuery( document ).ready(function($) {
 	});
 
 	function mytheme_customize_multi_add_field(e) {
+		var $this = $( e.currentTarget );
 		e.preventDefault();
-		var $control = $( this ).parents( '.customize_multi_input' );
-		$control.find( '.customize_multi_fields' ).append( '<div class="set"><input type="text" value="" class="customize_multi_single_field" /><span class="customize_multi_remove_field"><span class="dashicons dashicons-no-alt"></span></span></div>' );
+		if ( ! $this.data( 'lockedAt' ) || + new Date() - $this.data( 'lockedAt' ) > 300 ) {
+			var $control = $this.parents( '.customize_multi_input' );
+			$control.find( '.customize_multi_fields' ).append( '<div class="set"><input type="text" value="" class="customize_multi_single_field" /><span class="customize_multi_remove_field"><span class="dashicons dashicons-no-alt"></span></span></div>' );
+			mytheme_customize_multi_write( $control );
+		}
+		$this.data( 'lockedAt', + new Date() );
 	}
 
 	function mytheme_customize_multi_single_field() {
@@ -46,15 +61,6 @@ jQuery( document ).ready(function($) {
 			customize_multi_val += $( this ).val() + '|';
 		});
 		$element.find( '.customize_multi_value_field' ).val( customize_multi_val.slice( 0, -1 ) ).change();
-	}
-
-	function mytheme_control_description() {
-		$( 'li.customize-control' ).each(function() {
-			var $this = $( this );
-			if ( $this.find( 'p' ).html() !== '' ) {
-				$this.find( 'p' ).replaceWith( '<span class="description customize-control-description">' + $this.find( 'p' ).text() + '</span>' );
-			}
-		});
 	}
 
 	/********* Slider Custom control ***********/
