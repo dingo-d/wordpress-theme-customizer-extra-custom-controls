@@ -5,7 +5,6 @@ jQuery( document ).ready(function($) {
 
 	$( document ).on( 'click', '.customize_multi_add_field', mytheme_customize_multi_add_field )
 		.on( 'click', '.customize_multi_remove_field', mytheme_customize_multi_remove_field )
-		.on( 'click', '.customize_multi_remove_field', mytheme_customize_multi_remove_field )
 		.on( 'keyup', '.box-model-field', mytheme_box_model_change )
 		.on( 'change keyup', '.slider_input', mytheme_slider_input_change );
 
