@@ -169,7 +169,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 				<div class="customize_multi_fields">
 					<div class="set">
 						<input type="text" value="" class="customize_multi_single_field"/>
-						<a href="#" class="customize_multi_remove_field"><span class="dashicons dashicons-no-alt"></span></a>
+						<span class="customize_multi_remove_field"><span class="dashicons dashicons-no-alt"></span></span>
 					</div>
 				</div>
 				<a href="#" class="button button-primary customize_multi_add_field"><?php esc_html_e( 'Add More', 'mytheme' ) ?></a>
