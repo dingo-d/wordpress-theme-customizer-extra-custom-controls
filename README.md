@@ -1,6 +1,6 @@
 # Wordpress Theme Customizer Extra Custom controls
 
-Contributors: Denis Žoljom (dingo-d)
+Contributors: Denis Žoljom (dingo-d) bla this is a fix
 
 Requires at least: 3.9
 
