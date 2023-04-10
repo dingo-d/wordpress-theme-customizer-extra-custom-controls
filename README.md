@@ -1,5 +1,15 @@
 # Wordpress Theme Customizer Extra Custom controls
 
+## ⚠️ A note regarding the Customize API ⚠️
+
+It has been a long time since I've used this package, and as such I cannot vouch that it works.
+
+The Customize API will most likely be replaced by some kind of [Full Site Editing](https://fullsiteediting.com/) features such as [global styles](https://make.wordpress.org/design/handbook/focuses/global-styles/).
+
+I recommend you get acquainted with it, and use that instead, as that will be the way forward for WordPress. You'll learn something new, and save yourself the pain of updaing your themes/projects once Customize API is deprecated.
+
+---
+
 Contributors: Denis Žoljom (dingo-d)
 
 Requires at least: 3.9
